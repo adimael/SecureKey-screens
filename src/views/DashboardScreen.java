@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.net.URL;
 import javax.swing.ImageIcon;
+import views.formScreen.CadastroPessoaDialog;
 import views.formScreen.CadastroSalaDialog;
 import views.formScreen.VisualizarSalasDialog;
 import views.formScreen.VisualizarUserDialog;
@@ -27,15 +28,6 @@ public class DashboardScreen extends javax.swing.JFrame {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
         
-                
-        URL txtBemVindo = getClass().getResource("/icons/image 3.png");
-                
-        if (txtBemVindo != null) {
-            jLabelBemVindo.setIcon(new ImageIcon(txtBemVindo));
-        } else {
-            System.out.println("icone Bem-vindo não foi encontrado!");
-        }
-        
         URL txtDashboardIcon = getClass().getResource("/icons/data-analysis32.png");
         btnDashboard.setCursor(new Cursor(Cursor.HAND_CURSOR));
         
@@ -49,16 +41,16 @@ public class DashboardScreen extends javax.swing.JFrame {
         URL txtUsuariosIcon = getClass().getResource("/icons/team.png");
         URL txtSeta1Icon = getClass().getResource("/icons/left-arrow.png");
         URL txtAddUserIcon = getClass().getResource("/icons/sign-up (1).png");
-        URL txtVisualizarUsersIcon = getClass().getResource("/icons/team32.png");
+        URL txtVisualizarUsersIcon = getClass().getResource("/icons/log.png");
         btnMenuUsuario.setCursor(new Cursor(Cursor.HAND_CURSOR));
         itemAddUser.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        itemVisualizarUsers.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        itemHistoricoUsers.setCursor(new Cursor(Cursor.HAND_CURSOR));
         
         if (txtUsuariosIcon != null && txtSeta1Icon != null && txtAddUserIcon != null && txtVisualizarUsersIcon != null) {
             txtUsuarios.setIcon(new ImageIcon(txtUsuariosIcon));
             iconSeta1.setIcon(new ImageIcon(txtSeta1Icon));
             txtAddUser.setIcon(new ImageIcon(txtAddUserIcon));
-            txtVisualizarUsers.setIcon(new ImageIcon(txtVisualizarUsersIcon));
+            txtHistoricoUsers.setIcon(new ImageIcon(txtVisualizarUsersIcon));
         } else {
             System.out.println("Icone Menu Usuários não foi encontrado!");
         }
@@ -94,17 +86,11 @@ public class DashboardScreen extends javax.swing.JFrame {
         URL txtSuporteIcon = getClass().getResource("/icons/request (1).png");
         URL txtSairIcon = getClass().getResource("/icons/check-out (1).png");
         btnMenuUser.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        itemPerfil.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        itemConfigurações.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        itemSuporte.setCursor(new Cursor(Cursor.HAND_CURSOR));
         itemSair.setCursor(new Cursor(Cursor.HAND_CURSOR));
         
         if (txtNomeUserIcon != null && txtSeta3Icon != null && txtPerfilIcon != null && txtConfiguraçõesIcon != null && txtSuporteIcon != null && txtSairIcon != null) {
             txtNomeUser.setIcon(new ImageIcon(txtNomeUserIcon));
             txtSeta3.setIcon(new ImageIcon(txtSeta3Icon));
-            txtPerfil.setIcon(new ImageIcon(txtPerfilIcon));
-            txtConfigurações.setIcon(new ImageIcon(txtConfiguraçõesIcon));
-            txtSuporte.setIcon(new ImageIcon(txtSuporteIcon));
             txtSair.setIcon(new ImageIcon(txtSairIcon));
         } else {
             System.out.println("Icone Menu do usuário não foi encontrado!");
@@ -122,6 +108,7 @@ public class DashboardScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
         btnDashboard = new javax.swing.JPanel();
@@ -138,8 +125,12 @@ public class DashboardScreen extends javax.swing.JFrame {
         jmenu = new javax.swing.JPanel();
         itemAddUser = new javax.swing.JPanel();
         txtAddUser = new javax.swing.JLabel();
-        itemVisualizarUsers = new javax.swing.JPanel();
-        txtVisualizarUsers = new javax.swing.JLabel();
+        itemHistoricoUsers = new javax.swing.JPanel();
+        txtHistoricoUsers = new javax.swing.JLabel();
+        itemAddPessoa = new javax.swing.JPanel();
+        txtAddPessoa = new javax.swing.JLabel();
+        itemVisualizarUsers1 = new javax.swing.JPanel();
+        txtVisualizarUsers1 = new javax.swing.JLabel();
         jmenu1 = new javax.swing.JPanel();
         itemAddSala = new javax.swing.JPanel();
         txtAddSala = new javax.swing.JLabel();
@@ -148,15 +139,19 @@ public class DashboardScreen extends javax.swing.JFrame {
         itemHistoricoChaves = new javax.swing.JPanel();
         txtHistoricoChaves = new javax.swing.JLabel();
         jmenu2 = new javax.swing.JPanel();
-        itemPerfil = new javax.swing.JPanel();
-        txtPerfil = new javax.swing.JLabel();
-        itemConfigurações = new javax.swing.JPanel();
-        txtConfigurações = new javax.swing.JLabel();
-        itemSuporte = new javax.swing.JPanel();
-        txtSuporte = new javax.swing.JLabel();
         itemSair = new javax.swing.JPanel();
         txtSair = new javax.swing.JLabel();
-        jLabelBemVindo = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel2 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        painel1 = new javax.swing.JPanel();
+        sala1 = new javax.swing.JButton();
+        sala2 = new javax.swing.JButton();
+        sala3 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        placeHolderNome = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1320, 820));
@@ -394,43 +389,136 @@ public class DashboardScreen extends javax.swing.JFrame {
             .addGroup(itemAddUserLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtAddUser)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        itemVisualizarUsers.setBackground(new java.awt.Color(255, 255, 255));
-        itemVisualizarUsers.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        itemVisualizarUsers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        itemVisualizarUsers.addMouseListener(new java.awt.event.MouseAdapter() {
+        itemHistoricoUsers.setBackground(new java.awt.Color(255, 255, 255));
+        itemHistoricoUsers.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        itemHistoricoUsers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        itemHistoricoUsers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                itemVisualizarUsersMouseClicked(evt);
+                itemHistoricoUsersMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                itemVisualizarUsersMouseEntered(evt);
+                itemHistoricoUsersMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                itemVisualizarUsersMouseExited(evt);
+                itemHistoricoUsersMouseExited(evt);
             }
         });
 
-        txtVisualizarUsers.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        txtVisualizarUsers.setForeground(new java.awt.Color(51, 51, 51));
-        txtVisualizarUsers.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/team32.png")); // NOI18N
-        txtVisualizarUsers.setText("Visualizar usuários");
-        txtVisualizarUsers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtHistoricoUsers.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
+        txtHistoricoUsers.setForeground(new java.awt.Color(51, 51, 51));
+        txtHistoricoUsers.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/log.png")); // NOI18N
+        txtHistoricoUsers.setText("Histórico de usuários");
+        txtHistoricoUsers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout itemVisualizarUsersLayout = new javax.swing.GroupLayout(itemVisualizarUsers);
-        itemVisualizarUsers.setLayout(itemVisualizarUsersLayout);
-        itemVisualizarUsersLayout.setHorizontalGroup(
-            itemVisualizarUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(itemVisualizarUsersLayout.createSequentialGroup()
+        javax.swing.GroupLayout itemHistoricoUsersLayout = new javax.swing.GroupLayout(itemHistoricoUsers);
+        itemHistoricoUsers.setLayout(itemHistoricoUsersLayout);
+        itemHistoricoUsersLayout.setHorizontalGroup(
+            itemHistoricoUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(itemHistoricoUsersLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtVisualizarUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(txtHistoricoUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        itemVisualizarUsersLayout.setVerticalGroup(
-            itemVisualizarUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(itemVisualizarUsersLayout.createSequentialGroup()
+        itemHistoricoUsersLayout.setVerticalGroup(
+            itemHistoricoUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(itemHistoricoUsersLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtVisualizarUsers)
+                .addComponent(txtHistoricoUsers)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        itemAddPessoa.setBackground(new java.awt.Color(255, 255, 255));
+        itemAddPessoa.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        itemAddPessoa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        itemAddPessoa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                itemAddPessoaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                itemAddPessoaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                itemAddPessoaMouseExited(evt);
+            }
+        });
+
+        txtAddPessoa.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
+        txtAddPessoa.setForeground(new java.awt.Color(51, 51, 51));
+        txtAddPessoa.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/pessoa.png")); // NOI18N
+        txtAddPessoa.setText("Cadastrar pessoa");
+        txtAddPessoa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtAddPessoa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtAddPessoaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtAddPessoaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtAddPessoaMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout itemAddPessoaLayout = new javax.swing.GroupLayout(itemAddPessoa);
+        itemAddPessoa.setLayout(itemAddPessoaLayout);
+        itemAddPessoaLayout.setHorizontalGroup(
+            itemAddPessoaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(itemAddPessoaLayout.createSequentialGroup()
+                .addComponent(txtAddPessoa)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        itemAddPessoaLayout.setVerticalGroup(
+            itemAddPessoaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(itemAddPessoaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtAddPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        itemVisualizarUsers1.setBackground(new java.awt.Color(255, 255, 255));
+        itemVisualizarUsers1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        itemVisualizarUsers1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        itemVisualizarUsers1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                itemVisualizarUsers1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                itemVisualizarUsers1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                itemVisualizarUsers1MouseExited(evt);
+            }
+        });
+
+        txtVisualizarUsers1.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
+        txtVisualizarUsers1.setForeground(new java.awt.Color(51, 51, 51));
+        txtVisualizarUsers1.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/team32.png")); // NOI18N
+        txtVisualizarUsers1.setText("Visualizar usuários");
+        txtVisualizarUsers1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtVisualizarUsers1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtVisualizarUsers1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtVisualizarUsers1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout itemVisualizarUsers1Layout = new javax.swing.GroupLayout(itemVisualizarUsers1);
+        itemVisualizarUsers1.setLayout(itemVisualizarUsers1Layout);
+        itemVisualizarUsers1Layout.setHorizontalGroup(
+            itemVisualizarUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(itemVisualizarUsers1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtVisualizarUsers1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        itemVisualizarUsers1Layout.setVerticalGroup(
+            itemVisualizarUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(itemVisualizarUsers1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(txtVisualizarUsers1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -440,18 +528,24 @@ public class DashboardScreen extends javax.swing.JFrame {
             jmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jmenuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(itemVisualizarUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemAddUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 41, Short.MAX_VALUE))
+                .addGroup(jmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(itemVisualizarUsers1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(itemHistoricoUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(itemAddUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(itemAddPessoa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 44, Short.MAX_VALUE))
         );
         jmenuLayout.setVerticalGroup(
             jmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jmenuLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(jmenuLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(itemAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(itemVisualizarUsers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(itemAddPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(itemVisualizarUsers1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(itemHistoricoUsers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jmenu1.setBackground(new java.awt.Color(255, 255, 255));
@@ -593,14 +687,13 @@ public class DashboardScreen extends javax.swing.JFrame {
         );
         jmenu1Layout.setVerticalGroup(
             jmenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jmenu1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(jmenu1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(itemAddSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(itemVisualizarSalas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(itemHistoricoChaves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(itemHistoricoChaves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jmenu2.setBackground(new java.awt.Color(255, 255, 255));
@@ -613,99 +706,6 @@ public class DashboardScreen extends javax.swing.JFrame {
                 jmenu2MouseExited(evt);
             }
         });
-
-        itemPerfil.setBackground(new java.awt.Color(255, 255, 255));
-        itemPerfil.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        itemPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        itemPerfil.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                itemPerfilMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                itemPerfilMouseExited(evt);
-            }
-        });
-
-        txtPerfil.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        txtPerfil.setForeground(new java.awt.Color(102, 102, 102));
-        txtPerfil.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtPerfil.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/user32.png")); // NOI18N
-        txtPerfil.setText("Perfil");
-        txtPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtPerfil.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-
-        javax.swing.GroupLayout itemPerfilLayout = new javax.swing.GroupLayout(itemPerfil);
-        itemPerfil.setLayout(itemPerfilLayout);
-        itemPerfilLayout.setHorizontalGroup(
-            itemPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtPerfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        itemPerfilLayout.setVerticalGroup(
-            itemPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtPerfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-        );
-
-        itemConfigurações.setBackground(new java.awt.Color(255, 255, 255));
-        itemConfigurações.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        itemConfigurações.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        itemConfigurações.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                itemConfiguraçõesMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                itemConfiguraçõesMouseExited(evt);
-            }
-        });
-
-        txtConfigurações.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        txtConfigurações.setForeground(new java.awt.Color(102, 102, 102));
-        txtConfigurações.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtConfigurações.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/settings.png")); // NOI18N
-        txtConfigurações.setText("Configurações");
-        txtConfigurações.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtConfigurações.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-
-        javax.swing.GroupLayout itemConfiguraçõesLayout = new javax.swing.GroupLayout(itemConfigurações);
-        itemConfigurações.setLayout(itemConfiguraçõesLayout);
-        itemConfiguraçõesLayout.setHorizontalGroup(
-            itemConfiguraçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtConfigurações, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-        );
-        itemConfiguraçõesLayout.setVerticalGroup(
-            itemConfiguraçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtConfigurações, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-        );
-
-        itemSuporte.setBackground(new java.awt.Color(255, 255, 255));
-        itemSuporte.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        itemSuporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        itemSuporte.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                itemSuporteMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                itemSuporteMouseExited(evt);
-            }
-        });
-
-        txtSuporte.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        txtSuporte.setForeground(new java.awt.Color(102, 102, 102));
-        txtSuporte.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtSuporte.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/request (1).png")); // NOI18N
-        txtSuporte.setText("Suporte");
-        txtSuporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtSuporte.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-
-        javax.swing.GroupLayout itemSuporteLayout = new javax.swing.GroupLayout(itemSuporte);
-        itemSuporte.setLayout(itemSuporteLayout);
-        itemSuporteLayout.setHorizontalGroup(
-            itemSuporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtSuporte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-        );
-        itemSuporteLayout.setVerticalGroup(
-            itemSuporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtSuporte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-        );
 
         itemSair.setBackground(new java.awt.Color(255, 255, 255));
         itemSair.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -744,37 +744,125 @@ public class DashboardScreen extends javax.swing.JFrame {
             jmenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jmenu2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jmenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(itemPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemConfigurações, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemSuporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(itemSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jmenu2Layout.setVerticalGroup(
             jmenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jmenu2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(itemPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemConfigurações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemSuporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(itemSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabelBemVindo.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
-        jLabelBemVindo.setForeground(new java.awt.Color(102, 102, 102));
-        jLabelBemVindo.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/image 3.png")); // NOI18N
-        jLabelBemVindo.setText("BEM-VINDO AO SECUREKEY");
-        jLabelBemVindo.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTabbedPane1.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+
+        painel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        sala1.setBackground(new java.awt.Color(102, 255, 102));
+        sala1.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
+        sala1.setForeground(new java.awt.Color(102, 102, 102));
+        sala1.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/computer.png")); // NOI18N
+        sala1.setText("124 - Laboratório de informática");
+        sala1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        sala1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        sala2.setBackground(new java.awt.Color(102, 255, 102));
+        sala2.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
+        sala2.setForeground(new java.awt.Color(102, 102, 102));
+        sala2.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/biologia.png")); // NOI18N
+        sala2.setText("120 - Laboratório de biologia");
+        sala2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        sala2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        sala3.setBackground(new java.awt.Color(102, 255, 102));
+        sala3.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
+        sala3.setForeground(new java.awt.Color(102, 102, 102));
+        sala3.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/quimica.png")); // NOI18N
+        sala3.setText("127 - Laboratório de quimica");
+        sala3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        sala3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/icons8-search-32.png")); // NOI18N
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, -1, -1));
+
+        placeHolderNome.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        placeHolderNome.setForeground(new java.awt.Color(153, 153, 153));
+        placeHolderNome.setText("Pesquisar....");
+        placeHolderNome.setEnabled(false);
+        placeHolderNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                placeHolderNomeKeyTyped(evt);
+            }
+        });
+        jPanel3.add(placeHolderNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 510, 60));
+
+        jTextField1.setBackground(new java.awt.Color(204, 255, 204));
+        jTextField1.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 520, 60));
+
+        javax.swing.GroupLayout painel1Layout = new javax.swing.GroupLayout(painel1);
+        painel1.setLayout(painel1Layout);
+        painel1Layout.setHorizontalGroup(
+            painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painel1Layout.createSequentialGroup()
+                        .addComponent(sala1)
+                        .addGap(51, 51, 51)
+                        .addComponent(sala2)
+                        .addGap(18, 18, 18)
+                        .addComponent(sala3))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painel1Layout.setVerticalGroup(
+            painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addGroup(painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sala1)
+                    .addComponent(sala2)
+                    .addComponent(sala3))
+                .addContainerGap(331, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Dashboard Principal", painel1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.getAccessibleContext().setAccessibleName("Dashboard Principal");
+
+        jScrollPane1.setViewportView(jPanel2);
 
         jLayeredPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jmenu, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jmenu1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jmenu2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabelBemVindo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -782,17 +870,13 @@ public class DashboardScreen extends javax.swing.JFrame {
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(188, 188, 188)
-                .addComponent(jmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(141, 141, 141)
+                .addComponent(jmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
                 .addComponent(jmenu1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE)
-                .addComponent(jmenu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelBemVindo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jmenu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jScrollPane1)
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -800,13 +884,12 @@ public class DashboardScreen extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jmenu2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(jmenu1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 261, Short.MAX_VALUE)
-                .addComponent(jLabelBemVindo)
-                .addContainerGap(416, Short.MAX_VALUE))
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jmenu1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -840,7 +923,7 @@ public class DashboardScreen extends javax.swing.JFrame {
         URL SetaDown = getClass().getResource("/icons/down-arrow.png");
         ImageIcon downArrowIcon = new ImageIcon(SetaDown);
         iconSeta1.setIcon(downArrowIcon);
-        jmenu.setSize(280, 180);
+        jmenu.setSize(301, 361);
     }//GEN-LAST:event_btnMenuUsuarioMouseEntered
 
     private void btnMenuUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuUsuarioMouseExited
@@ -861,7 +944,7 @@ public class DashboardScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jmenuMouseExited
 
     private void itemAddUserMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemAddUserMouseEntered
-        jmenu.setSize(280, 180);
+        jmenu.setSize(301, 361);
         itemAddUser.setBackground(Color.LIGHT_GRAY);
         URL SetaDown = getClass().getResource("/icons/down-arrow.png");
         ImageIcon downArrowIcon = new ImageIcon(SetaDown);
@@ -886,24 +969,24 @@ public class DashboardScreen extends javax.swing.JFrame {
         btnMenuUsuario.setBackground(Color.LIGHT_GRAY);
     }//GEN-LAST:event_jmenuMouseEntered
 
-    private void itemVisualizarUsersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemVisualizarUsersMouseEntered
+    private void itemHistoricoUsersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemHistoricoUsersMouseEntered
         // TODO add your handling code here:
-        jmenu.setSize(280, 180);
-        itemVisualizarUsers.setBackground(Color.LIGHT_GRAY);
+        jmenu.setSize(301, 361);
+        itemHistoricoUsers.setBackground(Color.LIGHT_GRAY);
         URL SetaDown = getClass().getResource("/icons/down-arrow.png");
         ImageIcon downArrowIcon = new ImageIcon(SetaDown);
         iconSeta1.setIcon(downArrowIcon);
         btnMenuUsuario.setBackground(Color.LIGHT_GRAY);
-    }//GEN-LAST:event_itemVisualizarUsersMouseEntered
+    }//GEN-LAST:event_itemHistoricoUsersMouseEntered
 
-    private void itemVisualizarUsersMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemVisualizarUsersMouseExited
+    private void itemHistoricoUsersMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemHistoricoUsersMouseExited
         // TODO add your handling code here:
-        itemVisualizarUsers.setBackground(Color.WHITE);
+        itemHistoricoUsers.setBackground(Color.WHITE);
         btnMenuUsuario.setBackground(Color.WHITE);
         URL Setaleft = getClass().getResource("/icons/left-arrow.png");
         ImageIcon leftArrowIcon = new ImageIcon(Setaleft);
         iconSeta1.setIcon(leftArrowIcon);
-    }//GEN-LAST:event_itemVisualizarUsersMouseExited
+    }//GEN-LAST:event_itemHistoricoUsersMouseExited
 
     private void btnMenuGenSalasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuGenSalasMouseEntered
         jmenu1.setSize(306, 243);
@@ -985,57 +1068,6 @@ public class DashboardScreen extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnMenuUserMouseEntered
 
-    private void itemPerfilMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemPerfilMouseEntered
-        // TODO add your handling code here:
-        jmenu2.setSize(270, 290);
-        itemPerfil.setBackground(Color.LIGHT_GRAY);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemPerfilMouseEntered
-
-    private void itemPerfilMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemPerfilMouseExited
-        // TODO add your handling code here:
-        itemPerfil.setBackground(Color.WHITE);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemPerfilMouseExited
-
-    private void itemConfiguraçõesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemConfiguraçõesMouseEntered
-        // TODO add your handling code here:
-        jmenu2.setSize(270, 290);
-        itemConfigurações.setBackground(Color.LIGHT_GRAY);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemConfiguraçõesMouseEntered
-
-    private void itemConfiguraçõesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemConfiguraçõesMouseExited
-        // TODO add your handling code here:
-        itemConfigurações.setBackground(Color.WHITE);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemConfiguraçõesMouseExited
-
-    private void itemSuporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemSuporteMouseEntered
-        // TODO add your handling code here:
-        jmenu2.setSize(270, 290);
-        itemSuporte.setBackground(Color.LIGHT_GRAY);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemSuporteMouseEntered
-
-    private void itemSuporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemSuporteMouseExited
-        // TODO add your handling code here:
-        itemSuporte.setBackground(Color.WHITE);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemSuporteMouseExited
-
     private void itemSairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemSairMouseEntered
         // TODO add your handling code here:
         jmenu2.setSize(270, 290);
@@ -1087,11 +1119,10 @@ public class DashboardScreen extends javax.swing.JFrame {
         cadastroUser.setVisible(true);
     }//GEN-LAST:event_itemAddUserMouseClicked
 
-    private void itemVisualizarUsersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemVisualizarUsersMouseClicked
+    private void itemHistoricoUsersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemHistoricoUsersMouseClicked
         // TODO add your handling code here:
-        VisualizarUserDialog visualizarUsers = new VisualizarUserDialog(new javax.swing.JFrame(), true);
-        visualizarUsers.setVisible(true);
-    }//GEN-LAST:event_itemVisualizarUsersMouseClicked
+        
+    }//GEN-LAST:event_itemHistoricoUsersMouseClicked
 
     private void itemAddSalaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemAddSalaMouseClicked
         // TODO add your handling code here:
@@ -1110,6 +1141,108 @@ public class DashboardScreen extends javax.swing.JFrame {
         VisualizarHistoricoDialog visualizarHistorico = new VisualizarHistoricoDialog(new javax.swing.JFrame(), true);
         visualizarHistorico.setVisible(true);
     }//GEN-LAST:event_itemHistoricoChavesMouseClicked
+
+    private void itemAddPessoaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemAddPessoaMouseClicked
+        // TODO add your handling code here:
+        CadastroPessoaDialog cadastroPessoa = new CadastroPessoaDialog(new javax.swing.JFrame(), true);
+        cadastroPessoa.setVisible(true);
+    }//GEN-LAST:event_itemAddPessoaMouseClicked
+
+    private void itemAddPessoaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemAddPessoaMouseEntered
+        // TODO add your handling code here:
+        jmenu.setSize(301, 361);
+        itemAddPessoa.setBackground(Color.LIGHT_GRAY);
+        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
+        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
+        iconSeta1.setIcon(downArrowIcon);
+        btnMenuUsuario.setBackground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_itemAddPessoaMouseEntered
+
+    private void itemAddPessoaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemAddPessoaMouseExited
+        // TODO add your handling code here:
+        itemAddPessoa.setBackground(Color.WHITE);
+        btnMenuUsuario.setBackground(Color.WHITE);
+        URL Setaleft = getClass().getResource("/icons/left-arrow.png");
+        ImageIcon leftArrowIcon = new ImageIcon(Setaleft);
+        iconSeta1.setIcon(leftArrowIcon);
+    }//GEN-LAST:event_itemAddPessoaMouseExited
+
+    private void txtAddPessoaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtAddPessoaMouseClicked
+        // TODO add your handling code here:
+        CadastroPessoaDialog cadastroPessoa = new CadastroPessoaDialog(new javax.swing.JFrame(), true);
+        cadastroPessoa.setVisible(true);
+        jmenu.setSize(301, 361);
+        itemAddPessoa.setBackground(Color.LIGHT_GRAY);
+        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
+        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
+        iconSeta1.setIcon(downArrowIcon);
+        btnMenuUsuario.setBackground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_txtAddPessoaMouseClicked
+
+    private void txtAddPessoaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtAddPessoaMouseEntered
+        // TODO add your handling code here:
+        jmenu.setSize(301, 361);
+        itemAddPessoa.setBackground(Color.LIGHT_GRAY);
+        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
+        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
+        iconSeta1.setIcon(downArrowIcon);
+        btnMenuUsuario.setBackground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_txtAddPessoaMouseEntered
+
+    private void txtAddPessoaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtAddPessoaMouseExited
+        // TODO add your handling code here:
+        itemAddPessoa.setBackground(Color.WHITE);
+        btnMenuUsuario.setBackground(Color.WHITE);
+        URL Setaleft = getClass().getResource("/icons/left-arrow.png");
+        ImageIcon leftArrowIcon = new ImageIcon(Setaleft);
+        iconSeta1.setIcon(leftArrowIcon);
+    }//GEN-LAST:event_txtAddPessoaMouseExited
+
+    private void itemVisualizarUsers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemVisualizarUsers1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemVisualizarUsers1MouseClicked
+
+    private void itemVisualizarUsers1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemVisualizarUsers1MouseEntered
+        // TODO add your handling code here:
+        jmenu.setSize(301, 361);
+        itemVisualizarUsers1.setBackground(Color.LIGHT_GRAY);
+        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
+        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
+        iconSeta1.setIcon(downArrowIcon);
+        btnMenuUsuario.setBackground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_itemVisualizarUsers1MouseEntered
+
+    private void itemVisualizarUsers1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemVisualizarUsers1MouseExited
+        // TODO add your handling code here:
+        itemVisualizarUsers1.setBackground(Color.WHITE);
+        btnMenuUsuario.setBackground(Color.WHITE);
+        URL Setaleft = getClass().getResource("/icons/left-arrow.png");
+        ImageIcon leftArrowIcon = new ImageIcon(Setaleft);
+        iconSeta1.setIcon(leftArrowIcon);
+    }//GEN-LAST:event_itemVisualizarUsers1MouseExited
+
+    private void txtVisualizarUsers1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtVisualizarUsers1MouseEntered
+        // TODO add your handling code here:
+        jmenu.setSize(301, 361);
+        txtVisualizarUsers1.setBackground(Color.LIGHT_GRAY);
+        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
+        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
+        iconSeta1.setIcon(downArrowIcon);
+        btnMenuUsuario.setBackground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_txtVisualizarUsers1MouseEntered
+
+    private void txtVisualizarUsers1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtVisualizarUsers1MouseExited
+        // TODO add your handling code here:
+        txtVisualizarUsers1.setBackground(Color.WHITE);
+        btnMenuUsuario.setBackground(Color.WHITE);
+        URL Setaleft = getClass().getResource("/icons/left-arrow.png");
+        ImageIcon leftArrowIcon = new ImageIcon(Setaleft);
+        iconSeta1.setIcon(leftArrowIcon);
+    }//GEN-LAST:event_txtVisualizarUsers1MouseExited
+
+    private void placeHolderNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderNomeKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_placeHolderNomeKeyTyped
 
     /**
      * @param args the command line arguments
@@ -1151,34 +1284,43 @@ public class DashboardScreen extends javax.swing.JFrame {
     private javax.swing.JPanel btnMenuUsuario;
     private javax.swing.JLabel iconSeta1;
     private javax.swing.JLabel iconSeta2;
+    private javax.swing.JPanel itemAddPessoa;
     private javax.swing.JPanel itemAddSala;
     private javax.swing.JPanel itemAddUser;
-    private javax.swing.JPanel itemConfigurações;
     private javax.swing.JPanel itemHistoricoChaves;
-    private javax.swing.JPanel itemPerfil;
+    private javax.swing.JPanel itemHistoricoUsers;
     private javax.swing.JPanel itemSair;
-    private javax.swing.JPanel itemSuporte;
     private javax.swing.JPanel itemVisualizarSalas;
-    private javax.swing.JPanel itemVisualizarUsers;
-    private javax.swing.JLabel jLabelBemVindo;
+    private javax.swing.JPanel itemVisualizarUsers1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel jmenu;
     private javax.swing.JPanel jmenu1;
     private javax.swing.JPanel jmenu2;
+    private javax.swing.JPanel painel1;
+    private javax.swing.JLabel placeHolderNome;
+    private javax.swing.JButton sala1;
+    private javax.swing.JButton sala2;
+    private javax.swing.JButton sala3;
+    private javax.swing.JLabel txtAddPessoa;
     private javax.swing.JLabel txtAddSala;
     private javax.swing.JLabel txtAddUser;
-    private javax.swing.JLabel txtConfigurações;
     private javax.swing.JLabel txtDashboard;
     private javax.swing.JLabel txtGenSalas;
     private javax.swing.JLabel txtHistoricoChaves;
+    private javax.swing.JLabel txtHistoricoUsers;
     private javax.swing.JLabel txtNomeUser;
-    private javax.swing.JLabel txtPerfil;
     private javax.swing.JLabel txtSair;
     private javax.swing.JLabel txtSeta3;
-    private javax.swing.JLabel txtSuporte;
     private javax.swing.JLabel txtUsuarios;
     private javax.swing.JLabel txtVisualizarSala;
-    private javax.swing.JLabel txtVisualizarUsers;
+    private javax.swing.JLabel txtVisualizarUsers1;
     // End of variables declaration//GEN-END:variables
 }

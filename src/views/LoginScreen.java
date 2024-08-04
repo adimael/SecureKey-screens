@@ -36,7 +36,6 @@ public class LoginScreen extends javax.swing.JFrame {
             System.out.println("Algum icone não foi encontrado na tela de login!");
         }
         
-        btnEsqueceuPass.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btnLogin.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }
 
@@ -57,7 +56,6 @@ public class LoginScreen extends javax.swing.JFrame {
         placeHolderPass = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabelPassword = new javax.swing.JLabel();
-        btnEsqueceuPass = new javax.swing.JLabel();
         jLabelUsername = new javax.swing.JLabel();
         iconUser = new javax.swing.JLabel();
         placeHolderUser = new javax.swing.JLabel();
@@ -115,12 +113,6 @@ public class LoginScreen extends javax.swing.JFrame {
         jLabelPassword.setForeground(new java.awt.Color(7, 164, 121));
         jLabelPassword.setText("Password");
         jPanel2.add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
-
-        btnEsqueceuPass.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        btnEsqueceuPass.setForeground(new java.awt.Color(0, 153, 204));
-        btnEsqueceuPass.setText("Esqueceu a senha? Clique aqui.");
-        btnEsqueceuPass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(btnEsqueceuPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, -1, -1));
 
         jLabelUsername.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabelUsername.setForeground(new java.awt.Color(7, 164, 121));
@@ -273,7 +265,6 @@ public class LoginScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane bg;
-    private javax.swing.JLabel btnEsqueceuPass;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel iconPassword;
     private javax.swing.JLabel iconSecureKey;

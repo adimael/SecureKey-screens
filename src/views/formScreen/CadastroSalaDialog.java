@@ -32,6 +32,7 @@ public class CadastroSalaDialog extends javax.swing.JDialog {
     private void initComponents() {
 
         placeHolderUser = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -50,6 +51,10 @@ public class CadastroSalaDialog extends javax.swing.JDialog {
         jChaveReserva = new javax.swing.JComboBox<>();
         btnCadastrar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         placeHolderUser.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         placeHolderUser.setForeground(new java.awt.Color(153, 153, 153));
@@ -63,6 +68,9 @@ public class CadastroSalaDialog extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1712, 960));
+        setPreferredSize(new java.awt.Dimension(1524, 847));
+
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -129,7 +137,7 @@ public class CadastroSalaDialog extends javax.swing.JDialog {
                 placeHolderEnderecoKeyTyped(evt);
             }
         });
-        jPanel1.add(placeHolderEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 510, 60));
+        jPanel1.add(placeHolderEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 510, 60));
 
         jNomeField.setBackground(new java.awt.Color(204, 255, 204));
         jNomeField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
@@ -169,7 +177,7 @@ public class CadastroSalaDialog extends javax.swing.JDialog {
                 jDescricaoFieldKeyReleased(evt);
             }
         });
-        jPanel1.add(jDescricaoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 1596, 60));
+        jPanel1.add(jDescricaoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 1596, 60));
 
         jLabel4.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
@@ -206,17 +214,37 @@ public class CadastroSalaDialog extends javax.swing.JDialog {
         btnCancelar.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 750, 190, 60));
 
+        jLabel11.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel11.setText("Descrição");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel12.setText("Nome da sala");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel13.setText("Número da sala");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel14.setText("Bloco / Prédio");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 80, -1, -1));
+
+        jScrollPane1.setViewportView(jPanel1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1718, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1724, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)
         );
 
         pack();
@@ -341,6 +369,10 @@ public class CadastroSalaDialog extends javax.swing.JDialog {
     private javax.swing.JTextField jBlocoField;
     private javax.swing.JComboBox<String> jChaveReserva;
     private javax.swing.JTextField jDescricaoField;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -350,6 +382,7 @@ public class CadastroSalaDialog extends javax.swing.JDialog {
     private javax.swing.JTextField jNomeField;
     private javax.swing.JTextField jNumeroField;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel placeHolderCPF;
     private javax.swing.JLabel placeHolderEmail;
     private javax.swing.JLabel placeHolderEndereco;

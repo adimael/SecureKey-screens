@@ -6,14 +6,12 @@ package views.UserComum;
 
 import views.*;
 import views.formScreen.VisualizarHistoricoDialog;
-import views.formScreen.CadastroUserDialog;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import views.formScreen.CadastroSalaDialog;
 import views.formScreen.VisualizarSalasDialog;
-import views.formScreen.VisualizarUserDialog;
 
 /**
  *
@@ -28,14 +26,6 @@ public class DashboardScreen extends javax.swing.JFrame {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
         
-                
-        URL txtBemVindo = getClass().getResource("/icons/image 3.png");
-                
-        if (txtBemVindo != null) {
-            jLabelBemVindo.setIcon(new ImageIcon(txtBemVindo));
-        } else {
-            System.out.println("icone Bem-vindo não foi encontrado!");
-        }
         
         URL txtDashboardIcon = getClass().getResource("/icons/data-analysis32.png");
         btnDashboard.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -78,17 +68,11 @@ public class DashboardScreen extends javax.swing.JFrame {
         URL txtSuporteIcon = getClass().getResource("/icons/request (1).png");
         URL txtSairIcon = getClass().getResource("/icons/check-out (1).png");
         btnMenuUser.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        itemPerfil.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        itemConfigurações.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        itemSuporte.setCursor(new Cursor(Cursor.HAND_CURSOR));
         itemSair.setCursor(new Cursor(Cursor.HAND_CURSOR));
         
         if (txtNomeUserIcon != null && txtSeta3Icon != null && txtPerfilIcon != null && txtConfiguraçõesIcon != null && txtSuporteIcon != null && txtSairIcon != null) {
             txtNomeUser.setIcon(new ImageIcon(txtNomeUserIcon));
             txtSeta3.setIcon(new ImageIcon(txtSeta3Icon));
-            txtPerfil.setIcon(new ImageIcon(txtPerfilIcon));
-            txtConfigurações.setIcon(new ImageIcon(txtConfiguraçõesIcon));
-            txtSuporte.setIcon(new ImageIcon(txtSuporteIcon));
             txtSair.setIcon(new ImageIcon(txtSairIcon));
         } else {
             System.out.println("Icone Menu do usuário não foi encontrado!");
@@ -124,15 +108,19 @@ public class DashboardScreen extends javax.swing.JFrame {
         itemHistoricoChaves = new javax.swing.JPanel();
         txtHistoricoChaves = new javax.swing.JLabel();
         jmenu2 = new javax.swing.JPanel();
-        itemPerfil = new javax.swing.JPanel();
-        txtPerfil = new javax.swing.JLabel();
-        itemConfigurações = new javax.swing.JPanel();
-        txtConfigurações = new javax.swing.JLabel();
-        itemSuporte = new javax.swing.JPanel();
-        txtSuporte = new javax.swing.JLabel();
         itemSair = new javax.swing.JPanel();
         txtSair = new javax.swing.JLabel();
-        jLabelBemVindo = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel2 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        painel1 = new javax.swing.JPanel();
+        sala1 = new javax.swing.JButton();
+        sala2 = new javax.swing.JButton();
+        sala3 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        placeHolderNome = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1320, 820));
@@ -440,99 +428,6 @@ public class DashboardScreen extends javax.swing.JFrame {
             }
         });
 
-        itemPerfil.setBackground(new java.awt.Color(255, 255, 255));
-        itemPerfil.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        itemPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        itemPerfil.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                itemPerfilMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                itemPerfilMouseExited(evt);
-            }
-        });
-
-        txtPerfil.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        txtPerfil.setForeground(new java.awt.Color(102, 102, 102));
-        txtPerfil.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtPerfil.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/user32.png")); // NOI18N
-        txtPerfil.setText("Perfil");
-        txtPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtPerfil.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-
-        javax.swing.GroupLayout itemPerfilLayout = new javax.swing.GroupLayout(itemPerfil);
-        itemPerfil.setLayout(itemPerfilLayout);
-        itemPerfilLayout.setHorizontalGroup(
-            itemPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtPerfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        itemPerfilLayout.setVerticalGroup(
-            itemPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtPerfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-        );
-
-        itemConfigurações.setBackground(new java.awt.Color(255, 255, 255));
-        itemConfigurações.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        itemConfigurações.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        itemConfigurações.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                itemConfiguraçõesMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                itemConfiguraçõesMouseExited(evt);
-            }
-        });
-
-        txtConfigurações.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        txtConfigurações.setForeground(new java.awt.Color(102, 102, 102));
-        txtConfigurações.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtConfigurações.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/settings.png")); // NOI18N
-        txtConfigurações.setText("Configurações");
-        txtConfigurações.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtConfigurações.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-
-        javax.swing.GroupLayout itemConfiguraçõesLayout = new javax.swing.GroupLayout(itemConfigurações);
-        itemConfigurações.setLayout(itemConfiguraçõesLayout);
-        itemConfiguraçõesLayout.setHorizontalGroup(
-            itemConfiguraçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtConfigurações, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-        );
-        itemConfiguraçõesLayout.setVerticalGroup(
-            itemConfiguraçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtConfigurações, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-        );
-
-        itemSuporte.setBackground(new java.awt.Color(255, 255, 255));
-        itemSuporte.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        itemSuporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        itemSuporte.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                itemSuporteMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                itemSuporteMouseExited(evt);
-            }
-        });
-
-        txtSuporte.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
-        txtSuporte.setForeground(new java.awt.Color(102, 102, 102));
-        txtSuporte.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtSuporte.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/request (1).png")); // NOI18N
-        txtSuporte.setText("Suporte");
-        txtSuporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtSuporte.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-
-        javax.swing.GroupLayout itemSuporteLayout = new javax.swing.GroupLayout(itemSuporte);
-        itemSuporte.setLayout(itemSuporteLayout);
-        itemSuporteLayout.setHorizontalGroup(
-            itemSuporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtSuporte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-        );
-        itemSuporteLayout.setVerticalGroup(
-            itemSuporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtSuporte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-        );
-
         itemSair.setBackground(new java.awt.Color(255, 255, 255));
         itemSair.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         itemSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -570,36 +465,123 @@ public class DashboardScreen extends javax.swing.JFrame {
             jmenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jmenu2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jmenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(itemPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemConfigurações, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemSuporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(itemSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jmenu2Layout.setVerticalGroup(
             jmenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jmenu2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(itemPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemConfigurações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemSuporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(itemSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabelBemVindo.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
-        jLabelBemVindo.setForeground(new java.awt.Color(102, 102, 102));
-        jLabelBemVindo.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/image 3.png")); // NOI18N
-        jLabelBemVindo.setText("BEM-VINDO AO SECUREKEY");
-        jLabelBemVindo.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTabbedPane1.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+
+        painel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        sala1.setBackground(new java.awt.Color(102, 255, 102));
+        sala1.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
+        sala1.setForeground(new java.awt.Color(102, 102, 102));
+        sala1.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/computer.png")); // NOI18N
+        sala1.setText("124 - Laboratório de informática");
+        sala1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        sala1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        sala2.setBackground(new java.awt.Color(102, 255, 102));
+        sala2.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
+        sala2.setForeground(new java.awt.Color(102, 102, 102));
+        sala2.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/biologia.png")); // NOI18N
+        sala2.setText("120 - Laboratório de biologia");
+        sala2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        sala2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        sala3.setBackground(new java.awt.Color(102, 255, 102));
+        sala3.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
+        sala3.setForeground(new java.awt.Color(102, 102, 102));
+        sala3.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/quimica.png")); // NOI18N
+        sala3.setText("127 - Laboratório de quimica");
+        sala3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        sala3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/icons8-search-32.png")); // NOI18N
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, -1, -1));
+
+        placeHolderNome.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        placeHolderNome.setForeground(new java.awt.Color(153, 153, 153));
+        placeHolderNome.setText("Pesquisar....");
+        placeHolderNome.setEnabled(false);
+        placeHolderNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                placeHolderNomeKeyTyped(evt);
+            }
+        });
+        jPanel3.add(placeHolderNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 510, 60));
+
+        jTextField1.setBackground(new java.awt.Color(204, 255, 204));
+        jTextField1.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 520, 60));
+
+        javax.swing.GroupLayout painel1Layout = new javax.swing.GroupLayout(painel1);
+        painel1.setLayout(painel1Layout);
+        painel1Layout.setHorizontalGroup(
+            painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painel1Layout.createSequentialGroup()
+                .addContainerGap(31, Short.MAX_VALUE)
+                .addComponent(sala1)
+                .addGap(51, 51, 51)
+                .addComponent(sala2)
+                .addGap(18, 18, 18)
+                .addComponent(sala3)
+                .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painel1Layout.setVerticalGroup(
+            painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addGroup(painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sala1)
+                    .addComponent(sala2)
+                    .addComponent(sala3))
+                .addContainerGap(417, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Dashboard Principal", painel1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
+        );
+
+        jScrollPane1.setViewportView(jPanel2);
 
         jLayeredPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jmenu1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jmenu2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabelBemVindo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -612,10 +594,11 @@ public class DashboardScreen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 581, Short.MAX_VALUE)
                 .addComponent(jmenu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelBemVindo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1308, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -625,9 +608,12 @@ public class DashboardScreen extends javax.swing.JFrame {
                 .addComponent(jmenu1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addComponent(jmenu2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
-                .addComponent(jLabelBemVindo)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(715, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(92, 92, 92)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -735,57 +721,6 @@ public class DashboardScreen extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnMenuUserMouseEntered
 
-    private void itemPerfilMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemPerfilMouseEntered
-        // TODO add your handling code here:
-        jmenu2.setSize(270, 290);
-        itemPerfil.setBackground(Color.LIGHT_GRAY);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemPerfilMouseEntered
-
-    private void itemPerfilMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemPerfilMouseExited
-        // TODO add your handling code here:
-        itemPerfil.setBackground(Color.WHITE);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemPerfilMouseExited
-
-    private void itemConfiguraçõesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemConfiguraçõesMouseEntered
-        // TODO add your handling code here:
-        jmenu2.setSize(270, 290);
-        itemConfigurações.setBackground(Color.LIGHT_GRAY);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemConfiguraçõesMouseEntered
-
-    private void itemConfiguraçõesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemConfiguraçõesMouseExited
-        // TODO add your handling code here:
-        itemConfigurações.setBackground(Color.WHITE);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemConfiguraçõesMouseExited
-
-    private void itemSuporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemSuporteMouseEntered
-        // TODO add your handling code here:
-        jmenu2.setSize(270, 290);
-        itemSuporte.setBackground(Color.LIGHT_GRAY);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemSuporteMouseEntered
-
-    private void itemSuporteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemSuporteMouseExited
-        // TODO add your handling code here:
-        itemSuporte.setBackground(Color.WHITE);
-        URL SetaDown = getClass().getResource("/icons/down-arrow.png");
-        ImageIcon downArrowIcon = new ImageIcon(SetaDown);
-        txtSeta3.setIcon(downArrowIcon);
-    }//GEN-LAST:event_itemSuporteMouseExited
-
     private void itemSairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemSairMouseEntered
         // TODO add your handling code here:
         jmenu2.setSize(270, 290);
@@ -849,6 +784,10 @@ public class DashboardScreen extends javax.swing.JFrame {
         visualizarHistorico.setVisible(true);
     }//GEN-LAST:event_itemHistoricoChavesMouseClicked
 
+    private void placeHolderNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderNomeKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_placeHolderNomeKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -889,27 +828,31 @@ public class DashboardScreen extends javax.swing.JFrame {
     private javax.swing.JPanel btnMenuUser;
     private javax.swing.JLabel iconSeta2;
     private javax.swing.JPanel itemAddSala;
-    private javax.swing.JPanel itemConfigurações;
     private javax.swing.JPanel itemHistoricoChaves;
-    private javax.swing.JPanel itemPerfil;
     private javax.swing.JPanel itemSair;
-    private javax.swing.JPanel itemSuporte;
     private javax.swing.JPanel itemVisualizarSalas;
-    private javax.swing.JLabel jLabelBemVindo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel jmenu1;
     private javax.swing.JPanel jmenu2;
+    private javax.swing.JPanel painel1;
+    private javax.swing.JLabel placeHolderNome;
+    private javax.swing.JButton sala1;
+    private javax.swing.JButton sala2;
+    private javax.swing.JButton sala3;
     private javax.swing.JLabel txtAddSala;
-    private javax.swing.JLabel txtConfigurações;
     private javax.swing.JLabel txtDashboard;
     private javax.swing.JLabel txtGenSalas;
     private javax.swing.JLabel txtHistoricoChaves;
     private javax.swing.JLabel txtNomeUser;
-    private javax.swing.JLabel txtPerfil;
     private javax.swing.JLabel txtSair;
     private javax.swing.JLabel txtSeta3;
-    private javax.swing.JLabel txtSuporte;
     private javax.swing.JLabel txtVisualizarSala;
     // End of variables declaration//GEN-END:variables
 }

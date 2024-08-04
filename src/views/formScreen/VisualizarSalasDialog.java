@@ -33,6 +33,10 @@ public class VisualizarSalasDialog extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        placeHolderNome = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         btnExportar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -43,6 +47,28 @@ public class VisualizarSalasDialog extends javax.swing.JDialog {
         setSize(new java.awt.Dimension(1712, 960));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        placeHolderNome.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        placeHolderNome.setForeground(new java.awt.Color(153, 153, 153));
+        placeHolderNome.setText("Pesquisar....");
+        placeHolderNome.setEnabled(false);
+        placeHolderNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                placeHolderNomeKeyTyped(evt);
+            }
+        });
+        jPanel2.add(placeHolderNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/icons8-search-32.png")); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, -1, -1));
+
+        jTextField1.setBackground(new java.awt.Color(204, 255, 204));
+        jTextField1.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 60));
 
         jLabel4.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
@@ -74,10 +100,17 @@ public class VisualizarSalasDialog extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(btnExportar, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(387, 387, 387)
+                .addGap(308, 308, 308)
                 .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1312, Short.MAX_VALUE)
+                .addContainerGap(549, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(841, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,6 +121,11 @@ public class VisualizarSalasDialog extends javax.swing.JDialog {
                     .addComponent(btnExportar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(594, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -104,6 +142,10 @@ public class VisualizarSalasDialog extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void placeHolderNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderNomeKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_placeHolderNomeKeyTyped
 
     /**
      * @param args the command line arguments
@@ -150,9 +192,13 @@ public class VisualizarSalasDialog extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExportar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableUsers;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel placeHolderNome;
     // End of variables declaration//GEN-END:variables
 }
