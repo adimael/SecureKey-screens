@@ -122,6 +122,8 @@ public class DashboardScreen extends javax.swing.JFrame {
         btnMenuUser = new javax.swing.JPanel();
         txtNomeUser = new javax.swing.JLabel();
         txtSeta3 = new javax.swing.JLabel();
+        btnDashboard1 = new javax.swing.JPanel();
+        txtDashboard1 = new javax.swing.JLabel();
         jmenu = new javax.swing.JPanel();
         itemAddUser = new javax.swing.JPanel();
         txtAddUser = new javax.swing.JLabel();
@@ -183,16 +185,16 @@ public class DashboardScreen extends javax.swing.JFrame {
         btnDashboardLayout.setHorizontalGroup(
             btnDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnDashboardLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addComponent(txtDashboard)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         btnDashboardLayout.setVerticalGroup(
             btnDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnDashboardLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(txtDashboard)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         btnMenuUsuario.setBackground(new java.awt.Color(255, 255, 255));
@@ -315,6 +317,40 @@ public class DashboardScreen extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnDashboard1.setBackground(new java.awt.Color(255, 255, 255));
+        btnDashboard1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        btnDashboard1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDashboard1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDashboard1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDashboard1MouseExited(evt);
+            }
+        });
+
+        txtDashboard1.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
+        txtDashboard1.setForeground(new java.awt.Color(51, 51, 51));
+        txtDashboard1.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/image 4.png")); // NOI18N
+        txtDashboard1.setText("Criar reserva");
+
+        javax.swing.GroupLayout btnDashboard1Layout = new javax.swing.GroupLayout(btnDashboard1);
+        btnDashboard1.setLayout(btnDashboard1Layout);
+        btnDashboard1Layout.setHorizontalGroup(
+            btnDashboard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnDashboard1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtDashboard1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnDashboard1Layout.setVerticalGroup(
+            btnDashboard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnDashboard1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtDashboard1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -326,6 +362,8 @@ public class DashboardScreen extends javax.swing.JFrame {
                 .addComponent(btnMenuUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnMenuGenSalas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnDashboard1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnMenuUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
@@ -338,7 +376,8 @@ public class DashboardScreen extends javax.swing.JFrame {
                     .addComponent(btnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnMenuUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnMenuGenSalas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnMenuUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnMenuUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDashboard1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(198, 198, 198))
         );
 
@@ -410,7 +449,7 @@ public class DashboardScreen extends javax.swing.JFrame {
         txtHistoricoUsers.setFont(new java.awt.Font("Inter", 1, 20)); // NOI18N
         txtHistoricoUsers.setForeground(new java.awt.Color(51, 51, 51));
         txtHistoricoUsers.setIcon(new javax.swing.ImageIcon("/home/adimael/NetBeansProjects/securekey/src/icons/log.png")); // NOI18N
-        txtHistoricoUsers.setText("Histórico de usuários");
+        txtHistoricoUsers.setText("Histórico de Login");
         txtHistoricoUsers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout itemHistoricoUsersLayout = new javax.swing.GroupLayout(itemHistoricoUsers);
@@ -533,7 +572,7 @@ public class DashboardScreen extends javax.swing.JFrame {
                     .addComponent(itemHistoricoUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(itemAddUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(itemAddPessoa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 44, Short.MAX_VALUE))
+                .addGap(0, 65, Short.MAX_VALUE))
         );
         jmenuLayout.setVerticalGroup(
             jmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -814,14 +853,15 @@ public class DashboardScreen extends javax.swing.JFrame {
             painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painel1Layout.createSequentialGroup()
-                        .addComponent(sala1)
-                        .addGap(51, 51, 51)
-                        .addComponent(sala2)
-                        .addGap(18, 18, 18)
-                        .addComponent(sala3))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(sala1)
+                .addGap(51, 51, 51)
+                .addComponent(sala2)
+                .addGap(18, 18, 18)
+                .addComponent(sala3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painel1Layout.setVerticalGroup(
@@ -1244,6 +1284,14 @@ public class DashboardScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_placeHolderNomeKeyTyped
 
+    private void btnDashboard1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDashboard1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDashboard1MouseEntered
+
+    private void btnDashboard1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDashboard1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDashboard1MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -1279,6 +1327,7 @@ public class DashboardScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnDashboard;
+    private javax.swing.JPanel btnDashboard1;
     private javax.swing.JPanel btnMenuGenSalas;
     private javax.swing.JPanel btnMenuUser;
     private javax.swing.JPanel btnMenuUsuario;
@@ -1313,6 +1362,7 @@ public class DashboardScreen extends javax.swing.JFrame {
     private javax.swing.JLabel txtAddSala;
     private javax.swing.JLabel txtAddUser;
     private javax.swing.JLabel txtDashboard;
+    private javax.swing.JLabel txtDashboard1;
     private javax.swing.JLabel txtGenSalas;
     private javax.swing.JLabel txtHistoricoChaves;
     private javax.swing.JLabel txtHistoricoUsers;

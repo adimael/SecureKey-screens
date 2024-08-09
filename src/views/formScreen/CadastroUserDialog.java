@@ -33,70 +33,31 @@ public class CadastroUserDialog extends javax.swing.JDialog {
 
         placeHolderUser = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        placeHolderNome = new javax.swing.JLabel();
-        placeHolderCPF = new javax.swing.JLabel();
-        placeHolderEmail = new javax.swing.JLabel();
-        placeHolderTelefone = new javax.swing.JLabel();
-        placeHolderEmpresa = new javax.swing.JLabel();
-        placeHolderCargo = new javax.swing.JLabel();
-        placeHolderEndereco = new javax.swing.JLabel();
-        placeHolderCidade = new javax.swing.JLabel();
-        placeHolderCEP = new javax.swing.JLabel();
-        jNomeField = new javax.swing.JTextField();
-        jCpfField = new javax.swing.JTextField();
-        try{
-            javax.swing.text.MaskFormatter cpf= new javax.swing.text.MaskFormatter("###.###.###-##");
-            jCpfField= new javax.swing.JFormattedTextField(cpf);
-        }
-        catch (Exception e){
-        }
-        jEmailField = new javax.swing.JTextField();
-        jTelefoneField = new javax.swing.JTextField();
-        try{
-            javax.swing.text.MaskFormatter telefone= new javax.swing.text.MaskFormatter("(##) #####-####");
-            jTelefoneField= new javax.swing.JFormattedTextField(telefone);
-        }
-        catch (Exception e){
-        }
-        jEmpresaField = new javax.swing.JTextField();
-        jCargoField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jEnderecoField = new javax.swing.JTextField();
-        jCidadeField = new javax.swing.JTextField();
-        jCepField = new javax.swing.JTextField();
-        try{
-            javax.swing.text.MaskFormatter cep= new javax.swing.text.MaskFormatter("#####-###");
-            jCepField= new javax.swing.JFormattedTextField(cep);
-        }
-        catch (Exception e){
-        }
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         placeHolderPassword = new javax.swing.JLabel();
         placeHolderUsername = new javax.swing.JLabel();
+        placeHolderPassword1 = new javax.swing.JLabel();
+        placeHolderPassword2 = new javax.swing.JLabel();
         jUsernameField = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jPasswordField = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
-        jNivelAcesso = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordField = new javax.swing.JPasswordField();
+        jLabel21 = new javax.swing.JLabel();
+        jPasswordField2 = new javax.swing.JPasswordField();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         btnCadastrar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        jNivelAcesso = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
 
         placeHolderUser.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         placeHolderUser.setForeground(new java.awt.Color(153, 153, 153));
@@ -109,215 +70,11 @@ public class CadastroUserDialog extends javax.swing.JDialog {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1712, 960));
+        setMinimumSize(new java.awt.Dimension(1700, 810));
         setPreferredSize(new java.awt.Dimension(1700, 810));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel6.setText("*");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 130, 20, -1));
-
-        jLabel9.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel9.setText("*");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 20, -1));
-
-        placeHolderNome.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderNome.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderNome.setText("Digite seu nome completo....");
-        placeHolderNome.setEnabled(false);
-        placeHolderNome.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderNomeKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 510, 60));
-
-        placeHolderCPF.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderCPF.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderCPF.setText("Digite seu CPF....");
-        placeHolderCPF.setEnabled(false);
-        placeHolderCPF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderCPFKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 510, 60));
-
-        placeHolderEmail.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderEmail.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderEmail.setText("Digite seu E-mail....");
-        placeHolderEmail.setEnabled(false);
-        placeHolderEmail.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderEmailKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 110, 510, 60));
-
-        placeHolderTelefone.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderTelefone.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderTelefone.setText("Digite seu telefone....");
-        placeHolderTelefone.setEnabled(false);
-        placeHolderTelefone.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderTelefoneKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 510, 60));
-
-        placeHolderEmpresa.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderEmpresa.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderEmpresa.setText("Empresa que trabalha....");
-        placeHolderEmpresa.setEnabled(false);
-        placeHolderEmpresa.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderEmpresaKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 510, 60));
-
-        placeHolderCargo.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderCargo.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderCargo.setText("Seu cargo na empresa....");
-        placeHolderCargo.setEnabled(false);
-        placeHolderCargo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderCargoKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 210, 510, 60));
-
-        placeHolderEndereco.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderEndereco.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderEndereco.setText("Digite seu endereço residencial.... Ex: Rua: Exemplo, Nº 200, Bairro: 2 de Julho");
-        placeHolderEndereco.setEnabled(false);
-        placeHolderEndereco.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderEnderecoKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 860, 60));
-
-        placeHolderCidade.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderCidade.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderCidade.setText("Cidade....");
-        placeHolderCidade.setEnabled(false);
-        placeHolderCidade.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderCidadeKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 510, 60));
-
-        placeHolderCEP.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        placeHolderCEP.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderCEP.setText("CEP");
-        placeHolderCEP.setEnabled(false);
-        placeHolderCEP.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                placeHolderCEPKeyTyped(evt);
-            }
-        });
-        jPanel1.add(placeHolderCEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 450, 510, 60));
-
-        jNomeField.setBackground(new java.awt.Color(204, 255, 204));
-        jNomeField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jNomeField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jNomeField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jNomeFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jNomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 114, 520, 60));
-
-        jCpfField.setBackground(new java.awt.Color(204, 255, 204));
-        jCpfField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jCpfField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jCpfField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jCpfFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jCpfField, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 114, 520, 60));
-
-        jEmailField.setBackground(new java.awt.Color(204, 255, 204));
-        jEmailField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jEmailField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jEmailField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jEmailFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jEmailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(1107, 114, 520, 60));
-
-        jTelefoneField.setBackground(new java.awt.Color(204, 255, 204));
-        jTelefoneField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jTelefoneField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jTelefoneField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTelefoneFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jTelefoneField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 520, 60));
-
-        jEmpresaField.setBackground(new java.awt.Color(204, 255, 204));
-        jEmpresaField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jEmpresaField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jEmpresaField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jEmpresaFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jEmpresaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 520, 60));
-
-        jCargoField.setBackground(new java.awt.Color(204, 255, 204));
-        jCargoField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jCargoField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jCargoField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jCargoFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jCargoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 210, 520, 60));
-
-        jLabel2.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("Endereço");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 294, -1, -1));
-
-        jEnderecoField.setBackground(new java.awt.Color(204, 255, 204));
-        jEnderecoField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jEnderecoField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jEnderecoField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jEnderecoFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jEnderecoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 1596, 60));
-
-        jCidadeField.setBackground(new java.awt.Color(204, 255, 204));
-        jCidadeField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jCidadeField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jCidadeField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jCidadeFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jCidadeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 520, 60));
-
-        jCepField.setBackground(new java.awt.Color(204, 255, 204));
-        jCepField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jCepField.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jCepField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jCepFieldKeyReleased(evt);
-            }
-        });
-        jPanel1.add(jCepField, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, 520, 60));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -325,23 +82,23 @@ public class CadastroUserDialog extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 51, 51));
         jLabel1.setText("*");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 160, 20, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 20, -1));
 
         jLabel7.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 51, 51));
         jLabel7.setText("*");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 70, 20, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, 20, -1));
 
         placeHolderPassword.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         placeHolderPassword.setForeground(new java.awt.Color(153, 153, 153));
-        placeHolderPassword.setText("Senha....");
+        placeHolderPassword.setText("Digite o nome da pessoa....");
         placeHolderPassword.setEnabled(false);
         placeHolderPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 placeHolderPasswordKeyTyped(evt);
             }
         });
-        jPanel2.add(placeHolderPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 60, 510, 60));
+        jPanel2.add(placeHolderPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 160, 480, 60));
 
         placeHolderUsername.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         placeHolderUsername.setForeground(new java.awt.Color(153, 153, 153));
@@ -353,6 +110,28 @@ public class CadastroUserDialog extends javax.swing.JDialog {
             }
         });
         jPanel2.add(placeHolderUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 510, 60));
+
+        placeHolderPassword1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        placeHolderPassword1.setForeground(new java.awt.Color(153, 153, 153));
+        placeHolderPassword1.setText("Confirmar senha....");
+        placeHolderPassword1.setEnabled(false);
+        placeHolderPassword1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                placeHolderPassword1KeyTyped(evt);
+            }
+        });
+        jPanel2.add(placeHolderPassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 480, 60));
+
+        placeHolderPassword2.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        placeHolderPassword2.setForeground(new java.awt.Color(153, 153, 153));
+        placeHolderPassword2.setText("Senha....");
+        placeHolderPassword2.setEnabled(false);
+        placeHolderPassword2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                placeHolderPassword2KeyTyped(evt);
+            }
+        });
+        jPanel2.add(placeHolderPassword2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 60, 480, 60));
 
         jUsernameField.setBackground(new java.awt.Color(204, 255, 204));
         jUsernameField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
@@ -367,7 +146,32 @@ public class CadastroUserDialog extends javax.swing.JDialog {
         jLabel8.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         jLabel8.setText("*");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 70, 20, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 130, 20, -1));
+
+        jLabel3.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("Dados de Acesso");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel10.setText("Senha");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 30, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel20.setText("Confirmar senha");
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, -1, -1));
+
+        jPasswordField1.setBackground(new java.awt.Color(204, 255, 204));
+        jPasswordField1.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        jPasswordField1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyReleased(evt);
+            }
+        });
+        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 160, 520, 60));
 
         jPasswordField.setBackground(new java.awt.Color(204, 255, 204));
         jPasswordField.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
@@ -377,29 +181,39 @@ public class CadastroUserDialog extends javax.swing.JDialog {
                 jPasswordFieldKeyReleased(evt);
             }
         });
-        jPanel2.add(jPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 60, 520, 60));
+        jPanel2.add(jPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 520, 60));
 
-        jLabel3.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("Dados de Acesso");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, -1, -1));
+        jLabel21.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel21.setText("Nome da pessoa");
+        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 130, -1, -1));
 
-        jNivelAcesso.setBackground(new java.awt.Color(204, 255, 204));
-        jNivelAcesso.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jNivelAcesso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o nível de acesso...", "Administrador", "Usuário comum" }));
-        jPanel2.add(jNivelAcesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 430, 40));
+        jPasswordField2.setBackground(new java.awt.Color(204, 255, 204));
+        jPasswordField2.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        jPasswordField2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPasswordField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jPasswordField2KeyReleased(evt);
+            }
+        });
+        jPanel2.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 60, 520, 60));
 
-        jLabel10.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("Senha");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 30, -1, -1));
+        jLabel22.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel22.setText("Username");
+        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, -1, -1));
 
-        jLabel20.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel20.setText("Username");
-        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, -1, -1));
+        jLabel9.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel9.setText("*");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 30, 20, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 522, 1712, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1712, -1));
+
+        jLabel2.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel2.setText("*");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 410, 20, -1));
 
         jLabel4.setFont(new java.awt.Font("Inter", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
@@ -417,59 +231,24 @@ public class CadastroUserDialog extends javax.swing.JDialog {
         btnCadastrar.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         btnCadastrar.setMaximumSize(new java.awt.Dimension(1290, 760));
         btnCadastrar.setMinimumSize(new java.awt.Dimension(1290, 760));
-        jPanel1.add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 750, 170, 60));
+        jPanel1.add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 470, 170, 60));
 
         btnCancelar.setBackground(new java.awt.Color(255, 153, 153));
         btnCancelar.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 51, 51));
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 750, 190, 60));
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 470, 190, 60));
 
-        jLabel11.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel11.setText("Nome completo");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        jNivelAcesso.setBackground(new java.awt.Color(204, 255, 204));
+        jNivelAcesso.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        jNivelAcesso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o nível de acesso...", "Administrador", "Usuário comum" }));
+        jPanel1.add(jNivelAcesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 430, 40));
 
-        jLabel12.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel12.setText("CPF");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, -1, -1));
-
-        jLabel13.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel13.setText("E-mail");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 80, -1, -1));
-
-        jLabel14.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel14.setText("Telefone");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
-
-        jLabel15.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel15.setText("Empresa");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, -1, -1));
-
-        jLabel16.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel16.setText("Cargo");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 180, -1, -1));
-
-        jLabel17.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel17.setText("Rua / Número / Bairro");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
-
-        jLabel18.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel18.setText("Cidade");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
-
-        jLabel19.setFont(new java.awt.Font("Inter", 1, 24)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel19.setText("CEP");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, -1, -1));
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setToolTipText("");
+        jScrollPane1.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 320, 520, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -481,7 +260,7 @@ public class CadastroUserDialog extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
         );
 
         pack();
@@ -496,145 +275,9 @@ public class CadastroUserDialog extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_placeHolderPasswordKeyTyped
 
-    private void placeHolderCPFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderCPFKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderCPFKeyTyped
-
-    private void placeHolderNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderNomeKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderNomeKeyTyped
-
-    private void placeHolderEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderEmailKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderEmailKeyTyped
-
-    private void placeHolderTelefoneKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderTelefoneKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderTelefoneKeyTyped
-
-    private void placeHolderEmpresaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderEmpresaKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderEmpresaKeyTyped
-
-    private void placeHolderCargoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderCargoKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderCargoKeyTyped
-
-    private void placeHolderEnderecoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderEnderecoKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderEnderecoKeyTyped
-
-    private void placeHolderCidadeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderCidadeKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderCidadeKeyTyped
-
-    private void placeHolderCEPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderCEPKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeHolderCEPKeyTyped
-
     private void placeHolderUsernameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderUsernameKeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_placeHolderUsernameKeyTyped
-
-    private void jNomeFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jNomeFieldKeyReleased
-        // TODO add your handling code here:
-        // TODO add your handling code here:
-        if(jNomeField.getText().isEmpty()) {
-            placeHolderNome.setVisible(true);
-            placeHolderNome.setEnabled(false);
-        } else {
-            placeHolderNome.setVisible(false);
-            placeHolderNome.setEnabled(false);
-        }
-    }//GEN-LAST:event_jNomeFieldKeyReleased
-
-    private void jCpfFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCpfFieldKeyReleased
-        // TODO add your handling code here:
-        if(jCpfField.getText().isEmpty()) {
-            placeHolderCPF.setVisible(true);
-            placeHolderCPF.setEnabled(false);
-        } else {
-            placeHolderCPF.setVisible(false);
-            placeHolderCPF.setEnabled(false);
-        }
-    }//GEN-LAST:event_jCpfFieldKeyReleased
-
-    private void jEmailFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jEmailFieldKeyReleased
-        // TODO add your handling code here:
-        if(jEmailField.getText().isEmpty()) {
-            placeHolderEmail.setVisible(true);
-            placeHolderEmail.setEnabled(false);
-        } else {
-            placeHolderEmail.setVisible(false);
-            placeHolderEmail.setEnabled(false);
-        }
-    }//GEN-LAST:event_jEmailFieldKeyReleased
-
-    private void jTelefoneFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTelefoneFieldKeyReleased
-        // TODO add your handling code here:
-        if(jTelefoneField.getText().isEmpty()) {
-            placeHolderTelefone.setVisible(true);
-            placeHolderTelefone.setEnabled(false);
-        } else {
-            placeHolderTelefone.setVisible(false);
-            placeHolderTelefone.setEnabled(false);
-        }
-    }//GEN-LAST:event_jTelefoneFieldKeyReleased
-
-    private void jEmpresaFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jEmpresaFieldKeyReleased
-        // TODO add your handling code here:
-        if(jEmpresaField.getText().isEmpty()) {
-            placeHolderEmpresa.setVisible(true);
-            placeHolderEmpresa.setEnabled(false);
-        } else {
-            placeHolderEmpresa.setVisible(false);
-            placeHolderEmpresa.setEnabled(false);
-        }
-    }//GEN-LAST:event_jEmpresaFieldKeyReleased
-
-    private void jCargoFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCargoFieldKeyReleased
-        // TODO add your handling code here:
-        if(jCargoField.getText().isEmpty()) {
-            placeHolderCargo.setVisible(true);
-            placeHolderCargo.setEnabled(false);
-        } else {
-            placeHolderCargo.setVisible(false);
-            placeHolderCargo.setEnabled(false);
-        }
-    }//GEN-LAST:event_jCargoFieldKeyReleased
-
-    private void jEnderecoFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jEnderecoFieldKeyReleased
-        // TODO add your handling code here:
-        if(jEnderecoField.getText().isEmpty()) {
-            placeHolderEndereco.setVisible(true);
-            placeHolderEndereco.setEnabled(false);
-        } else {
-            placeHolderEndereco.setVisible(false);
-            placeHolderEndereco.setEnabled(false);
-        }
-    }//GEN-LAST:event_jEnderecoFieldKeyReleased
-
-    private void jCidadeFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCidadeFieldKeyReleased
-        // TODO add your handling code here:
-        if(jCidadeField.getText().isEmpty()) {
-            placeHolderCidade.setVisible(true);
-            placeHolderCidade.setEnabled(false);
-        } else {
-            placeHolderCidade.setVisible(false);
-            placeHolderCidade.setEnabled(false);
-        }
-    }//GEN-LAST:event_jCidadeFieldKeyReleased
-
-    private void jCepFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCepFieldKeyReleased
-        // TODO add your handling code here:
-        if(jCepField.getText().isEmpty()) {
-            placeHolderCEP.setVisible(true);
-            placeHolderCEP.setEnabled(false);
-        } else {
-            placeHolderCEP.setVisible(false);
-            placeHolderCEP.setEnabled(false);
-        }
-    }//GEN-LAST:event_jCepFieldKeyReleased
 
     private void jUsernameFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jUsernameFieldKeyReleased
         // TODO add your handling code here:
@@ -657,6 +300,22 @@ public class CadastroUserDialog extends javax.swing.JDialog {
             placeHolderPassword.setEnabled(false);
         }
     }//GEN-LAST:event_jPasswordFieldKeyReleased
+
+    private void jPasswordField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1KeyReleased
+
+    private void placeHolderPassword1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderPassword1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_placeHolderPassword1KeyTyped
+
+    private void jPasswordField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField2KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField2KeyReleased
+
+    private void placeHolderPassword2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_placeHolderPassword2KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_placeHolderPassword2KeyTyped
 
     /**
      * @param args the command line arguments
@@ -703,50 +362,29 @@ public class CadastroUserDialog extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JTextField jCargoField;
-    private javax.swing.JTextField jCepField;
-    private javax.swing.JTextField jCidadeField;
-    private javax.swing.JTextField jCpfField;
-    private javax.swing.JTextField jEmailField;
-    private javax.swing.JTextField jEmpresaField;
-    private javax.swing.JTextField jEnderecoField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JComboBox<String> jNivelAcesso;
-    private javax.swing.JTextField jNomeField;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField;
-    private javax.swing.JTextField jTelefoneField;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jUsernameField;
-    private javax.swing.JLabel placeHolderCEP;
-    private javax.swing.JLabel placeHolderCPF;
-    private javax.swing.JLabel placeHolderCargo;
-    private javax.swing.JLabel placeHolderCidade;
-    private javax.swing.JLabel placeHolderEmail;
-    private javax.swing.JLabel placeHolderEmpresa;
-    private javax.swing.JLabel placeHolderEndereco;
-    private javax.swing.JLabel placeHolderNome;
     private javax.swing.JLabel placeHolderPassword;
-    private javax.swing.JLabel placeHolderTelefone;
+    private javax.swing.JLabel placeHolderPassword1;
+    private javax.swing.JLabel placeHolderPassword2;
     private javax.swing.JLabel placeHolderUser;
     private javax.swing.JLabel placeHolderUsername;
     // End of variables declaration//GEN-END:variables
